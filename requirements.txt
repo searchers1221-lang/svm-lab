@@ -1,0 +1,4 @@
+scikit-learn>=1.5
+matplotlib>=3.8
+pandas>=2.0
+xgboost>=2.0

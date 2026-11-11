@@ -1,0 +1,25 @@
+$ python3 nb.py
+объектов: 300  классы: [150 150]
+linear: acc=0.860  опорных=101
+rbf:    acc=0.910  опорных=92
+C=0.01  acc=0.870  опорных=300
+C=1     acc=0.910  опорных=92
+C=100   acc=0.937  опорных=57
+$ python3 nb_b.py
+лучшие: {'svc__C': 10, 'svc__gamma': 0.001}  AUC CV=0.777  поиск: 6 с
+param_svc__gamma  0.001  0.010  0.100  1.000
+param_svc__C                                
+0.1               0.771  0.772  0.763  0.655
+1.0               0.774  0.776  0.745  0.655
+10.0              0.777  0.761  0.694  0.646
+100.0             0.774  0.739  0.646  0.646
+SVM rbf (лучшая)   F1 test=0.599  AUC test=0.801  0.11 с
+SVM linear         F1 test=0.599  AUC test=0.798  0.12 с
+Логрегрессия       F1 test=0.611  AUC test=0.806  0.13 с
+Случайный лес      F1 test=0.556  AUC test=0.752  0.24 с
+XGBoost            F1 test=0.586  AUC test=0.792  0.17 с
+$ python3 nb_c.py
+n=2000   rbf SVC:  0.03 с   LinearSVC:  0.00 с
+n=4000   rbf SVC:  0.10 с   LinearSVC:  0.00 с
+n=8000   rbf SVC:  0.61 с   LinearSVC:  0.01 с
+n=16000  rbf SVC:  1.64 с   LinearSVC:  0.03 с
